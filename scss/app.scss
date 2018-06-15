@@ -1,0 +1,66 @@
+@import 'variables';
+@import 'base';
+
+
+// Mobile first
+.container {
+    width: $fullwidth;
+    display: grid;
+    grid-template-columns: 40% 20% 40%;
+    padding: 2rem;
+    // Tablet code 768px;
+    @media screen and (min-width: $breakpoint-tab) {
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        width: 70%;
+    }
+}
+
+.title {
+    background-color: $colorset2;
+    padding: 5rem;
+    text-align:center;
+}
+.leftside {
+    border: 1px solid blue;
+}
+
+.spine  {
+    border: 1px solid blue;
+}
+
+.rightside {
+    border: 1px solid blue;
+}
+.lightcontainer {
+  display: grid;
+  grid-template-columns: repeat(4, 15%);
+
+}
+.light {
+    border-radius: 50%;
+}
+
+.lightone {
+    width: 60px;
+    height: 60px;
+    background-color: $colorset3;
+}
+.lighttwo, .lightthree, .lightfour {
+    width: 30px;
+    height: 30px;
+}
+.lighttwo {
+    background-color: $colorset1;
+}
+
+.lightthree {
+    background-color: $colorset1;
+}
+
+.lightfour {
+    background-color: $colorset1;
+}

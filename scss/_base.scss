@@ -1,0 +1,47 @@
+/* -----------------------------------------------------------------------------
+ * Base Styles
+ * -------------------------------------------------------------------------- */
+
+ *, *::after, *::before {
+     box-sizing: inherit;
+ }
+
+ a {
+     text-decoration: none;
+ }
+
+ html {
+     font-size: 10px;
+ }
+
+ body {
+     box-sizing: border-box;
+     font-size: 1.5rem;
+     line-height: 1.5;
+     margin: 0;
+     padding: 0;
+     background-color: #efefef;
+     font-family: $textfont;
+     color: $dark;
+ }
+
+ h1, h2, h3, h4 {
+     margin: 30px;
+     color: $dark;
+     font-family: $headerfont;
+ }
+
+ p {
+     padding: 0;
+     margin: 0;
+ }
+
+header {
+
+}
+
+footer {
+    font-size: 1.1rem;
+    padding: rem;
+    text-align: center;
+}

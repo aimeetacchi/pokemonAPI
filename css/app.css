@@ -1,0 +1,89 @@
+/* -----------------------------------------------------------------------------
+ * Base Styles
+ * -------------------------------------------------------------------------- */
+*, *::after, *::before {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit; }
+
+a {
+  text-decoration: none; }
+
+html {
+  font-size: 10px; }
+
+body {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  background-color: #efefef;
+  font-family: "Roboto", sans-serif;
+  color: black; }
+
+h1, h2, h3, h4 {
+  margin: 30px;
+  color: black;
+  font-family: "Oswald", sans-serif; }
+
+p {
+  padding: 0;
+  margin: 0; }
+
+footer {
+  font-size: 1.1rem;
+  padding: rem;
+  text-align: center; }
+
+.container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 40% 20% 40%;
+  padding: 2rem; }
+  @media screen and (min-width: 680px) {
+    .container {
+      margin: 0 auto;
+      width: 80%; } }
+  @media screen and (min-width: 1024px) {
+    .container {
+      width: 70%; } }
+
+.title {
+  background-color: #08b09f;
+  padding: 5rem;
+  text-align: center; }
+
+.leftside {
+  border: 1px solid blue; }
+
+.spine {
+  border: 1px solid blue; }
+
+.rightside {
+  border: 1px solid blue; }
+
+.lightcontainer {
+  display: grid;
+  grid-template-columns: repeat(4, 15%); }
+
+.light {
+  border-radius: 50%; }
+
+.lightone {
+  width: 60px;
+  height: 60px;
+  background-color: #1160aa; }
+
+.lighttwo, .lightthree, .lightfour {
+  width: 30px;
+  height: 30px; }
+
+.lighttwo {
+  background-color: #d03737; }
+
+.lightthree {
+  background-color: #d03737; }
+
+.lightfour {
+  background-color: #d03737; }
