@@ -87,3 +87,8 @@ footer {
 
 .lightfour {
   background-color: #d03737; }
+
+.pokemonimage {
+  height: 100px;
+  width: 100px;
+  margin: 0 auto; }
