@@ -6,7 +6,7 @@
 .container {
     width: $fullwidth;
     display: grid;
-    grid-template-columns: 40% 20% 40%;
+    grid-template-columns: 45% 10% 45%;
     padding: 2rem;
     // Tablet code 768px;
     @media screen and (min-width: $breakpoint-tab) {
@@ -20,28 +20,34 @@
 }
 
 .title {
-    background-color: $colorset2;
+    background-color: $colorset1;
     padding: 5rem;
     text-align:center;
 }
-.leftside {
-    border: 1px solid blue;
+
+.leftside, .spine, .rightside {
+    background-color: $colorset1;
+    border-radius: 10px;
 }
 
 .spine  {
-    border: 1px solid blue;
+    border: 1px solid $dark;
 }
 
 .rightside {
-    border: 1px solid blue;
+    margin-top: 50px;
 }
-.lightcontainer {
-  display: grid;
-  grid-template-columns: repeat(4, 15%);
 
+// Lights on pokedex
+.lightcontainer {
+  margin: 10px;
+  height: 60px;
 }
 .light {
     border-radius: 50%;
+    float: left;
+    margin-right: 5px;
+    vertical-align: center;
 }
 
 .lightone {
@@ -54,19 +60,55 @@
     height: 30px;
 }
 .lighttwo {
-    background-color: $colorset1;
+    background-color: $colorset3;
 }
 
 .lightthree {
-    background-color: $colorset1;
+    background-color: $colorset4;
 }
 
 .lightfour {
-    background-color: $colorset1;
+    background-color: $colorset4;
 }
+// Search Pokemon Form
 
+.searchPokemon {
+    width: 90%;
+    margin: 1rem auto;
+
+    input[type="text"] {
+        width: 100%;
+        display: block;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+    .btn {
+        padding: 2rem 5rem;
+        border: none;
+        background-color: $colorset3;
+        width: 100%;
+        outline: none;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        font-weight: 800;
+        transition: all .5s ease-in;
+        &:hover {
+            background-color: lighten($colorset3, 20%);
+        }
+    }
+}
+// Pokemon image box ===
 .pokemonimage{
-    height:100px;
-    width:100px;
+    background-color: $light;
+    border: 2px solid $dark;
+    height:150px;
+    width:90%;
     margin: 0 auto;
+
+    #pokemon-img {
+        margin: 0 auto;
+        display: block;
+        width: 150px;
+    }
 }

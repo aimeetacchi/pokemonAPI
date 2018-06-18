@@ -6,33 +6,50 @@ when the window loads.
 */
 window.onload = function(){
 
+  const submit = document.querySelector('#submit');
+
+  submit.addEventListener('click', (e) => {
+    e.preventDefault();
+    // getting the number entered into the input and storing it in number
+    const number = document.querySelector('#searchbynum').value;
+
+    console.log(number);
+
+    // Search the API for the number and return back the pokemon with it.
+    
     //---Header setup. Not needed for local fetching.---\\
-  // var myHeaders = new Headers();
-  // myHeaders.append("Content-Type","application/json");
-  // myHeaders.append("access-control-allow-origin", "*");
+    // var myHeaders = new Headers();
+    // myHeaders.append("Content-Type","application/json");
+    // myHeaders.append("access-control-allow-origin", "*");
 
-  // when using a new resource, add in headers to fetch
-  fetch("./js/fakepokemonfile.json")
-    .then(function(response){
-      return response.json();
-    }).then(function(thisJson){
-      console.log(thisJson);
+    // when using a new resource, add in headers to fetch
+    fetch("./js/fakepokemonfile.json")
+      .then(function(response){
+        return response.json();
+      }).then(function(thisJson){
+        console.log(thisJson);
 
-      // Will iterate through the types and put them all into a string 
-      var types ="";
-       for(var x=0; x < thisJson.types.length; x++){
-        if(x == thisJson.types.length-1){
-          types += thisJson.types[x].type.name;
-        }else{
-          types += thisJson.types[x].type.name + "-";
+         // Will iterate through the types and put them all into a string 
+        let types = "type";
+        for(let x = 0; x < thisJson.types.length; x++){
+          if(x == thisJson.types.length-1){
+            types += thisJson.types[x].type.name;
+          }else{
+            types += thisJson.types[x].type.name + "-";
+          }
         }
-       }
-       
-       // Setting the details of the pokemon to the appropriate fields from response
+      
+      // Setting the details of the pokemon to the appropriate fields from response
+      const pokemonimage = document.querySelector("#pokemon-img");
+      const pokemonname = document.querySelector("#pokemon-details__name");
+      const pokemontype = document.querySelector("pokemon-details__type");
 
-       document.getElementById("pokemon-img").src=thisJson.sprites.front_default;
-       document.getElementById("pokemon-details__name").innerText=thisJson.name.toUpperCase();
-       document.getElementById("pokemon-details__type").innerText=types.toUpperCase();
-    })
+      pokemonimage.src = thisJson.sprites.front_default;
+      pokemonname.innerText = thisJson.name.toUpperCase();
+      pokemontype.innerText = types.toUpperCase();
+   })
+
+  });
+  
 };
 

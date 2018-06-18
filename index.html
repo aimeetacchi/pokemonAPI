@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="title">
-        <h1>My API</h1>
+        <h1>Pokedex using the Pokemon API</h1>
     </div>
     <div class="container">
     <div class="leftside">
@@ -32,6 +32,15 @@
             <div id="pokemon-details">
                 <h3 >NAME: <span id="pokemon-details__name"></span></h3>
                 <h4>TYPE: <span id="pokemon-details__type"></span></h4>
+            </div>
+            <div class="searchPokemon">
+                <form id="search">
+                    <div class="form-group">
+                        <label for="searchbynum">Search Pokemon by Number</label>
+                        <input type="text" name="searchbynum" id="searchbynum" placeholder="search number">
+                    </div>
+                   <input class="btn" type="submit" id="submit" value="Search">
+                </form>
             </div>
         </div>
     </div>
